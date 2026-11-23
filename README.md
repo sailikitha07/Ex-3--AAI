@@ -110,12 +110,10 @@ print(result)
 
 
 ## Output:
+<img width="142" height="25" alt="image" src="https://github.com/user-attachments/assets/d007aeb6-79ac-4ec8-96da-a5602275dc0a" />
+<img width="561" height="427" alt="image" src="https://github.com/user-attachments/assets/00979dcf-a991-43dc-8487-615865c47081" />
+<img width="261" height="75" alt="image" src="https://github.com/user-attachments/assets/20537d6d-d4d0-4537-9651-74fd116fe742" />
 
-<img width="142" height="25" alt="image" src="https://github.com/user-attachments/assets/b829986e-0a99-4a06-972d-05fe784bf55f" />
-
-<img width="561" height="427" alt="image" src="https://github.com/user-attachments/assets/4a308b07-5fa7-458a-a669-6714b15b8cda" />
-
-<img width="261" height="75" alt="image" src="https://github.com/user-attachments/assets/77eda672-55b1-4602-9413-99f2167170a6" />
 
 
 ## Result:
