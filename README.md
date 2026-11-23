@@ -1,7 +1,7 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>NAME : Cholimgapuram Sai Likitha</H3>
+<H3>REGISTER NO.: 212224230046</H3>
 <H3>EX. NO.3</H3>
-<H3>DATE:</H3>
+<H3>DATE:23.11.2026</H3>
 <H1 ALIGN =CENTER> Implementation of Approximate Inference in Bayesian Networks
 </H1>
 
@@ -35,12 +35,83 @@
 
 
 ## Program:
-Insert your code here
+```
+!pip install pgmpy networkx matplotlib
 
+from pgmpy.models import DiscreteBayesianNetwork
+from pgmpy.factors.discrete import TabularCPD
+from pgmpy.sampling import GibbsSampling
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Step 1: Create Bayesian Network
+model = DiscreteBayesianNetwork([
+    ("Burglary", "Alarm"),
+    ("Earthquake", "Alarm"),
+    ("Alarm", "JohnCalls"),
+    ("Alarm", "MaryCalls")
+])
+
+# Step 2: Define probabilities
+b = TabularCPD("Burglary", 2, [[0.999], [0.001]])
+e = TabularCPD("Earthquake", 2, [[0.998], [0.002]])
+
+a = TabularCPD("Alarm", 2,
+    [[0.999, 0.71, 0.06, 0.05],
+     [0.001, 0.29, 0.94, 0.95]],
+    evidence=["Burglary", "Earthquake"],
+    evidence_card=[2, 2])
+
+j = TabularCPD("JohnCalls", 2,
+    [[0.95, 0.1], [0.05, 0.9]],
+    evidence=["Alarm"], evidence_card=[2])
+
+m = TabularCPD("MaryCalls", 2,
+    [[0.1, 0.7], [0.9, 0.3]],
+    evidence=["Alarm"], evidence_card=[2])
+
+# Step 3: Add CPDs
+model.add_cpds(b, e, a, j, m)
+
+# Step 4: Verify model
+print("Model Valid:", model.check_model())
+
+# Step 5: Draw graph
+G = nx.DiGraph()
+G.add_edges_from([
+    ("Burglary", "Alarm"),
+    ("Earthquake", "Alarm"),
+    ("Alarm", "JohnCalls"),
+    ("Alarm", "MaryCalls")
+])
+
+pos = {
+    "Burglary": (0, 0),
+    "Earthquake": (2, 0),
+    "Alarm": (1, -2),
+    "JohnCalls": (0, -4),
+    "MaryCalls": (2, -4)
+}
+
+nx.draw(G, pos, with_labels=True, node_color="lavender",
+        node_size=2000, arrowsize=20)
+plt.title("Bayesian Network")
+plt.show()
+
+# Step 6: Gibbs Sampling
+sampler = GibbsSampling(model)
+samples = sampler.sample(size=10000)
+
+# Step 7: Calculate probability
+result = samples["Burglary"].value_counts(normalize=True)
+print("Burglary Probability:")
+print(result)
+```
 
 
 ## Output:
-<Show your results>
+<img width="561" height="427" alt="image" src="https://github.com/user-attachments/assets/4a308b07-5fa7-458a-a669-6714b15b8cda" />
+<img width="261" height="75" alt="image" src="https://github.com/user-attachments/assets/77eda672-55b1-4602-9413-99f2167170a6" />
 
 ## Result:
 Thus, Gibb's Sampling( Approximate Inference method) is succuessfully implemented using python.
