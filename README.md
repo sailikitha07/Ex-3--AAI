@@ -115,6 +115,5 @@ print(result)
 <img width="261" height="75" alt="image" src="https://github.com/user-attachments/assets/20537d6d-d4d0-4537-9651-74fd116fe742" />
 
 
-
 ## Result:
 Thus, Gibb's Sampling( Approximate Inference method) is succuessfully implemented using python.
