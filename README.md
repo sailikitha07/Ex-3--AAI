@@ -111,7 +111,7 @@ print(result)
 ```
 
 ## Output:
-
+ 
 <img width="142" height="25" alt="image" src="https://github.com/user-attachments/assets/d007aeb6-79ac-4ec8-96da-a5602275dc0a" />
 
 <img width="561" height="427" alt="image" src="https://github.com/user-attachments/assets/00979dcf-a991-43dc-8487-615865c47081" />
