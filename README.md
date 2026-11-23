@@ -113,8 +113,6 @@ print(result)
 
 <img width="561" height="427" alt="image" src="https://github.com/user-attachments/assets/4a308b07-5fa7-458a-a669-6714b15b8cda" />
 
-
-
 <img width="261" height="75" alt="image" src="https://github.com/user-attachments/assets/77eda672-55b1-4602-9413-99f2167170a6" />
 
 ## Result:
