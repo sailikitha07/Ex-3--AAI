@@ -35,6 +35,7 @@
 
 
 ## Program:
+
 ```
 !pip install pgmpy networkx matplotlib
 
@@ -106,14 +107,13 @@ samples = sampler.sample(size=10000)
 result = samples["Burglary"].value_counts(normalize=True)
 print("Burglary Probability:")
 print(result)
-```
 
+```
 
 ## Output:
 <img width="142" height="25" alt="image" src="https://github.com/user-attachments/assets/d007aeb6-79ac-4ec8-96da-a5602275dc0a" />
 <img width="561" height="427" alt="image" src="https://github.com/user-attachments/assets/00979dcf-a991-43dc-8487-615865c47081" />
 <img width="261" height="75" alt="image" src="https://github.com/user-attachments/assets/20537d6d-d4d0-4537-9651-74fd116fe742" />
-
 
 ## Result:
 Thus, Gibb's Sampling( Approximate Inference method) is succuessfully implemented using python.
